@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>MF Festas 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+header {
+    background: #ff4081;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin: 0;
+    color: #ff4081;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1ebc59;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎈 MF Festas</h1>
+    <p>Aluguel de peças para festas e eventos</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Mesa Decorativa</h3>
+        <p>Mesa ideal para aniversários e eventos.</p>
+        <div class="preco">R$ 80,00</div>
+        <button onclick="alugar('Mesa Decorativa - R$80')">
+            Alugar pelo WhatsApp
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Painel Temático</h3>
+        <p>Painel perfeito para fotos e decoração.</p>
+        <div class="preco">R$ 120,00</div>
+        <button onclick="alugar('Painel Temático - R$120')">
+            Alugar pelo WhatsApp
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Kit Balões</h3>
+        <p>Decoração com balões coloridos.</p>
+        <div class="preco">R$ 50,00</div>
+        <button onclick="alugar('Kit Balões - R$50')">
+            Alugar pelo WhatsApp
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    <p>📞 Telefone / WhatsApp: (24) 99993-1518</p>
+    <p>📧 E-mail: monicaferraz@yahoo.com.br</p>
+    <p>© 2026 - MF Festas</p>
+</footer>
+
+<script>
+function alugar(item) {
+    const numero = "5524999931518"; // WhatsApp da MF Festas
+    const mensagem = `Olá! Gostaria de informações sobre o aluguel: ${item}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
