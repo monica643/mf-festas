@@ -3,54 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <title>MF Festas 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #f2f2f2;
 }
 
 header {
     background: #ff4081;
     color: white;
-    padding: 25px;
     text-align: center;
+    padding: 25px 10px;
+}
+
+header h1 {
+    margin: 0;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
     background: white;
     border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
 }
 
-.card h3 {
-    margin: 0;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
     color: #ff4081;
 }
 
-.preco {
-    font-size: 18px;
+.card-content p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-content .preco {
     font-weight: bold;
-    margin: 10px 0;
+    margin-bottom: 10px;
+    color: #00aa00;
 }
 
 button {
     background: #25d366;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
+    width: 100%;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
 button:hover {
@@ -75,34 +105,37 @@ footer {
 </header>
 
 <div class="container">
-
     <div class="card">
-        <h3>Mesa Decorativa</h3>
-        <p>Mesa ideal para aniversários e eventos.</p>
-        <div class="preco">R$ 80,00</div>
-        <button onclick="alugar('Mesa Decorativa - R$80')">
-            Alugar pelo WhatsApp
-        </button>
+        <img src="https://images.unsplash.com/photo-1590080874971-54e1f3f0a4e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmVzdGF8fHx8fHwxNjc1Mjg0MDk5&ixlib=rb-4.0.3&q=80&w=400" alt="Mesa Decorativa">
+        <div class="card-content">
+            <h3>Mesa Decorativa</h3>
+            <p>Mesa ideal para aniversários e eventos.</p>
+            <div class="preco">R$ 80,00</div>
+            <button onclick="alugar('Mesa Decorativa - R$80')">Alugar pelo WhatsApp</button>
+        </div>
     </div>
 
     <div class="card">
-        <h3>Painel Temático</h3>
-        <p>Painel perfeito para fotos e decoração.</p>
-        <div class="preco">R$ 120,00</div>
-        <button onclick="alugar('Painel Temático - R$120')">
-            Alugar pelo WhatsApp
-        </button>
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmFsaXfDo3xlbnwwfHx8fDE2NzUyODQxMzE&ixlib=rb-4.0.3&q=80&w=400" alt="Painel Temático">
+        <div class="card-content">
+            <h3>Painel Temático</h3>
+            <p>Painel perfeito para fotos e decoração.</p>
+            <div class="preco">R$ 120,00</div>
+            <button onclick="alugar('Painel Temático - R$120')">Alugar pelo WhatsApp</button>
+        </div>
     </div>
 
     <div class="card">
-        <h3>Kit Balões</h3>
-        <p>Decoração com balões coloridos.</p>
-        <div class="preco">R$ 50,00</div>
-        <button onclick="alugar('Kit Balões - R$50')">
-            Alugar pelo WhatsApp
-        </button>
+        <img src="https://images.unsplash.com/photo-1601924582970-22e3f28f21e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmFsb2fzfHx8fDE2NzUyODQxNzI&ixlib=rb-4.0.3&q=80&w=400" alt="Kit Balões">
+        <div class="card-content">
+            <h3>Kit Balões</h3>
+            <p>Decoração com balões coloridos.</p>
+            <div class="preco">R$ 50,00</div>
+            <button onclick="alugar('Kit Balões - R$50')">Alugar pelo WhatsApp</button>
+        </div>
     </div>
 
+    <!-- Você pode duplicar cards aqui e substituir com os produtos reais -->
 </div>
 
 <footer>
