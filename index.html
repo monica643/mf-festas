@@ -105,37 +105,57 @@ footer {
 </header>
 
 <div class="container">
+
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1590080874971-54e1f3f0a4e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmVzdGF8fHx8fHwxNjc1Mjg0MDk5&ixlib=rb-4.0.3&q=80&w=400" alt="Mesa Decorativa">
+        <img src="https://images.pexels.com/photos/35556946/pexels-photo-35556946.jpeg" alt="Painel decorativo">
         <div class="card-content">
-            <h3>Mesa Decorativa</h3>
-            <p>Mesa ideal para aniversários e eventos.</p>
-            <div class="preco">R$ 80,00</div>
-            <button onclick="alugar('Mesa Decorativa - R$80')">Alugar pelo WhatsApp</button>
+            <h3>Painel</h3>
+            <p>Painel decorativo para festas.</p>
+            <div class="preco">R$ 150,00</div>
+            <button onclick="alugar('Painel - R$150')">Alugar pelo WhatsApp</button>
         </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmFsaXfDo3xlbnwwfHx8fDE2NzUyODQxMzE&ixlib=rb-4.0.3&q=80&w=400" alt="Painel Temático">
+        <img src="https://images.pexels.com/photos/17259710/pexels-photo-17259710.jpeg" alt="Bandejas">
         <div class="card-content">
-            <h3>Painel Temático</h3>
-            <p>Painel perfeito para fotos e decoração.</p>
-            <div class="preco">R$ 120,00</div>
-            <button onclick="alugar('Painel Temático - R$120')">Alugar pelo WhatsApp</button>
+            <h3>Bandejas</h3>
+            <p>Bandejas decorativas para doces e petiscos.</p>
+            <div class="preco">R$ 15,00</div>
+            <button onclick="alugar('Bandejas - R$15')">Alugar pelo WhatsApp</button>
         </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1601924582970-22e3f28f21e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmFsb2fzfHx8fDE2NzUyODQxNzI&ixlib=rb-4.0.3&q=80&w=400" alt="Kit Balões">
+        <img src="https://images.pexels.com/photos/35556946/pexels-photo-35556946.jpeg" alt="Vasos">
         <div class="card-content">
-            <h3>Kit Balões</h3>
-            <p>Decoração com balões coloridos.</p>
-            <div class="preco">R$ 50,00</div>
-            <button onclick="alugar('Kit Balões - R$50')">Alugar pelo WhatsApp</button>
+            <h3>Vasos</h3>
+            <p>Vasos decorativos para festa.</p>
+            <div class="preco">R$ 15,00</div>
+            <button onclick="alugar('Vasos - R$15')">Alugar pelo WhatsApp</button>
         </div>
     </div>
 
-    <!-- Você pode duplicar cards aqui e substituir com os produtos reais -->
+    <div class="card">
+        <img src="https://images.pexels.com/photos/11282245/pexels-photo-11282245.jpeg" alt="Arranjo de flor">
+        <div class="card-content">
+            <h3>Arranjo de flor</h3>
+            <p>Arranjo floral para decoração.</p>
+            <div class="preco">R$ 30,00</div>
+            <button onclick="alugar('Arranjo de flor - R$30')">Alugar pelo WhatsApp</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.pexels.com/photos/35556946/pexels-photo-35556946.jpeg" alt="Mesa de Vini">
+        <div class="card-content">
+            <h3>Mesa de Vini</h3>
+            <p>Mesa especial para festas.</p>
+            <div class="preco">R$ 200,00</div>
+            <button onclick="alugar('Mesa de Vini - R$200')">Alugar pelo WhatsApp</button>
+        </div>
+    </div>
+
 </div>
 
 <footer>
@@ -146,8 +166,8 @@ footer {
 
 <script>
 function alugar(item) {
-    const numero = "5524999931518"; // WhatsApp da MF Festas
-    const mensagem = `Olá! Gostaria de informações sobre o aluguel: ${item}`;
+    const numero = "5524999931518";
+    const mensagem = `Olá! Gostaria de alugar: ${item}`;
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, "_blank");
 }
